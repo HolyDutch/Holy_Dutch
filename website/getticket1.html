@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    
+    <style>
+        body{
+  background-color:darkgray;
+}
+.login-box{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: hsla(0, 0%, 14%, 0.945);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(166, 164, 168, 0.966);
+  border-radius: 10px;
+}
+.login-box h2{
+  margin: 0  0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.login-box .user-box{
+  position: relative;
+}
+.login-box .user-box input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: blanchedalmond;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  pointer-events: none;
+  transition: .1s;
+}
+button{
+  background-color: #030804;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:focus ~ label{
+  top: -20px;
+  left: 0;
+  color: burlywood;
+  font-size:  18px;
+}
+.login-box form button{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: burlywood;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 10px;
+  letter-spacing: 4px;
+}
+.login-box button:hover{
+  background: burlywood;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px burlywood,
+               0 0 25px burlywood,
+               0 0 50px burlywood,
+               0 0 100px burlywood;
+}
+.login-box button span{
+  position: absolute;
+  display: block;
+  
+}
+.login-box button span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient( 90deg,transparent,#14858b);
+  animation: btn-animl is linear infinite;
+}
+@keyframes btn-animl{
+  0%{
+      left: -100%;
+  }
+ 50%,100%{
+  left: 100%;
+ }
+}
+.login-box button span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,burlywood);
+  animation: btn-animl2 is linear infinite;
+  animation-delay: .25s
+}
+@keyframes btn-animl2{
+  0%{
+      top:-100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.login-box button span:nth-child(3){
+  bottom: 0;
+  right: -100;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,burlywood);
+  animation: btn-animl3 is linear infinite;
+  animation-delay: .5s
+}
+@keyframes btn-animl3{
+  0%{
+      right:-100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+.login-box button span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#5b3174);
+  animation: btn-animl4 is linear infinite;
+  animation-delay: .75s
+}
+@keyframes btn-animl4{
+  0%{
+      bottom:-100%;
+  }
+  50%,100%{
+   bottom: 100%;
+  }
+}
+p{
+  font-size: 24px;
+  color: burlywood;
+}
+.forgotpassword{
+  color: burlywood;
+}
+a{
+  color: rgb(52, 150, 236);
+}
+
+
+.subcontainer{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+}
+span.forgotpassword a{
+float: right;
+color: whitesmoke;
+padding-top: 16px;
+}
+.forgotpassword{
+color: rgb(74,146,235);
+}
+.remember{
+color: rgb(184, 145, 95);
+}
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        
+        <form action="ticket.html" method="POST" id="formlogin" onsubmit="return validate">
+            <fieldset class="getticket">
+                <legend><h3 style="color: azure;">GETTICKET</h3></legend>
+                <p style="color: azure;">Fill the following</p>
+            <div class="user-box">
+                <input type="text" name="username"required>
+                <label for="">Name</label>
+            </div>
+            <div class="user-box">
+                <input type="email" name="email" required>
+                <label >email</label>
+                
+            </div>
+            <div class="user-box">
+                <input type="number" name="telephone" required>
+                <label for="">Telephone</label>
+                
+            </div>
+            <div class="subcontainer">
+            <fieldset class="ticketing">
+                <legend style="color: azure;">TICKETING</legend>
+                <p >choose your preferred ticket</p>
+                <label style="color: burlywood; font-size: 24px;" ><input type="radio"  class="eventamount" name="vvip" value="5000"  required>VVIP</label><br>
+                <label  style="color: burlywood; font-size: 24px;" ><input type="radio" name="vvip"class="eventamount" value="3000"  required >VIP</label><br>
+                <label  style="color: burlywood; font-size: 24px;"><input type="radio"  name="vvip" class="eventamount"value="2000"  required>REGULAR</label>
+            </fieldset>
+            <fieldset class="payment">
+                <label style="color: burlywood; font-size: 28px;">Amount payable</label>
+            <input class="pay" type="text" id="event-price" style="background-color: #191a19; color: sandybrown;font-size: x-large;" name="event-price" maxlength="12"fixed readonly>
+            <script type="text/javascript">
+              $(document).ready(function() {
+        
+        $(".eventamount").click(function() { 
+          var amount = $(this).val();
+          
+          $("#event-price").val(amount);
+        });
+      });
+            </script>
+            </fieldset>
+           
+            </div>
+          <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                proceed
+          </button>
+          <button type="reset" right>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Refresh
+      </button></form>
+         
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        function validate(){
+            var $valid=true;
+            document.getElementById("user-info").innerHTML="";
+            document.getElementById("password-info").innerHTML="";
+             
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("passsword").value;
+            if(username==""){
+                document.getElementById("user-info").innerHTML="required";
+                $valid=false;
+            }
+            if(password==""){
+                document.getElementById("password").innerHTML="required";
+                $valid=false;
+            }
+            return $valid;
+        }
+     </script>
+</body>
+</html>
