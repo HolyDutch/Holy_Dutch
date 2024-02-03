@@ -1,0 +1,174 @@
+body { 
+    background: url(sol\ generation1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 700%;
+    padding: 2.5%;
+  }
+  h2{
+
+    color:rgb(240, 180, 15);
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color:rgb(240, 180, 15);
+}
+.may{
+  text-align: right;
+  
+}
+#container{
+    
+    height: 100vh;
+    width: 100%;
+    position: relative;
+   
+}
+#navbar {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 25%;
+    top: -100%;
+}
+#navbar ul li {
+  font-size: x-large;
+    height: 60px;
+    width: 80px;
+    margin: 0 30px;
+    display: grid;
+    place-items: center;
+    
+
+}
+#navbar ul:hover .active {
+    background: none;
+    border: none;
+}
+.centered {
+    font-size: 45px;
+    position: absolute;
+   top:20%;
+    left: 45%;
+    bottom:45%;
+    transform: translate(-50%, -50%);
+  }
+  .venue{
+    font-size: xx-large;
+    font-family: Arial ;
+    position: absolute;
+   top:400%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+  .getticket{
+    font-size: 64px;
+    position: absolute;
+    top:1100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4d0f0a;
+    color: rgb(16, 17, 17);
+  }
+  .payment1{
+    top: 500%;
+  }
+
+  .payment p {
+    
+    font-size: 52px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: .5px;
+    font-size: 18px;
+  }
+  
+  .payment {
+    
+    text-align: left;
+    width: 75%;
+  }
+  
+  .price {
+    text-align: right;
+    width: 25%;
+  }
+  
+
+  .wrap{
+    display: flex;
+    flex-direction: row;
+    }
+    .timer{
+      font-size: larger;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin-left: 3rem;
+    gap: 30px;
+    top: -100%;
+    
+    }
+    .days{
+      position: absolute;
+      bottom: -800px;
+      right: 320px;
+    background-color: rgb(14, 13, 13);
+    padding: 11px;
+    font-size: 22px;
+    }
+    .hours{
+      position: absolute;
+      bottom: -800px;
+      right: 200px;
+    background-color: rgb(20, 20, 20);
+    padding: 11px;
+    font-size: 22px;
+    }
+    .mins{
+      position: absolute;
+      bottom: -800px;
+      right: 80px;
+    background-color: rgb(19, 18, 17);
+    padding: 11px;
+    font-size: 22px;
+    }
+    .secs{
+      position: absolute;
+      bottom:-800px;
+      right: 11px;
+    background-color: rgb(14, 13, 13);
+    padding: 11px;
+    font-size: 22px;
+    }
+    .offer{
+      position: absolute;
+      bottom:-720px;
+      right: 101px;
+    background-color: rgb(14, 13, 13);
+    padding: 11px;
+    font-size: 22px;
+    }
+   img{
+  transform: translate(-50%, -50%);
+  position: absolute;
+   top: 610%;
+    left:1200px;
+  width: 530px;
+
+  border-radius: 10px;
+ }
